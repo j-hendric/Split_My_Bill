@@ -1029,3 +1029,8 @@ C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\SplitMyBill.dll
 C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\refint\SplitMyBill.dll
 C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\SplitMyBill.pdb
 C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\ref\SplitMyBill.dll
+C:\Users\13193\Documents\Work\SplitMyBill\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm
+C:\Users\13193\Documents\Work\SplitMyBill\bin\Debug\net8.0\wwwroot\_framework\Blazored.LocalStorage.wasm.gz
+C:\Users\13193\Documents\Work\SplitMyBill\bin\Debug\net8.0\Blazored.LocalStorage.dll
+C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\webcil\Blazored.LocalStorage.wasm
+C:\Users\13193\Documents\Work\SplitMyBill\obj\Debug\net8.0\compressed\cxek77buxv.gz

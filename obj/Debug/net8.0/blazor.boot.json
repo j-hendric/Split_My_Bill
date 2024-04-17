@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SplitMyBill",
   "resources": {
-    "hash": "sha256-xh1zia9rmmncY/x0TlJ7JeTaWS/ad2UOcXxf7HFW4ac=",
+    "hash": "sha256-ygD8Cyl5Wsjvof620TxDWSXdG99M0W96I5PKqL2keQQ=",
     "jsModuleNative": {
       "dotnet.native.8.0.4.u01mvnj4ii.js": "sha256-ju0+XWE0ihz554eKEj0HQ8Opa61xpbUIaX5/MNo8we4="
     },
@@ -17,6 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
+      "Blazored.LocalStorage.wasm": "sha256-OaMAAd5n7ORfyur5e3QIyEVKJ76MKIvwbg7/icnnYcU=",
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-kcIOasiNC2iD+Tg022f6aTCKnjwzyE8MQTNpQDoIzyw=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-DQpYnGUhJtjc5Lun2LKa8TfWW1uZsIf0oaXSKg5o8TY=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-QbQYD1i1kIfQf790hDwaN1AS44hTIDmXGQuabj0OKxo=",
@@ -208,10 +209,10 @@
       "mscorlib.wasm": "sha256-VCfYgt1mcjITabSTosCDVZ+68ea3Z7kakTFaLNLG+18=",
       "netstandard.wasm": "sha256-YOZxxR9PM3Dltcijfb0Q4FD39DkWZbZ1e2ScbZDvWJ4=",
       "System.Private.CoreLib.wasm": "sha256-NrT1QkAzVU//2wgK9vXdq77lCGvLJ4IOZ+Aegesyanc=",
-      "SplitMyBill.wasm": "sha256-SoCBp/c7uQGDpwCMN8Bd9DZjgffjxQ4fRFPhTEUoce4="
+      "SplitMyBill.wasm": "sha256-dJlyuZMWW6PkjlCqm3HJwlk3ZIRdiR8D2ch3qYGpzcU="
     },
     "pdb": {
-      "SplitMyBill.pdb": "sha256-9E2FJozJ9eXe6vYBlfQIT1s6RwQ3xwuouSLfGXEdWAY="
+      "SplitMyBill.pdb": "sha256-VjvOL0ZHumZxGe3m9OvVK0GtlKy4Uw3UJjBOkCGAKBU="
     }
   },
   "cacheBootResources": true,

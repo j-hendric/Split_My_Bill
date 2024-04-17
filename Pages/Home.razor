@@ -1,4 +1,8 @@
 ﻿@page "/"
+@using System.Text.Json
+@using static SplitMyBill.Pages.Historic
+@inject HttpClient Http
+@inject ILocalStorageService _localstorage;
 
 <PageTitle>Home</PageTitle>
 
@@ -51,22 +55,52 @@
         orders.Add(new WorkerOrder { name = "", drinkCost= 0.0});
     }
 
-    private void CalculatePayer()
+    private async Task CalculatePayer()
     {
         Random r = new Random();
         double rand = r.NextDouble();
         double cummulative = 0.0;
         double totalCost = CalculateTotal();
+        luckyWinner = "";
+        var stringData = await _localstorage.GetItemAsStringAsync("purchases");
+        var data = stringData != null ? JsonSerializer.Deserialize<Purchases[]>(stringData) : [];
+
         for (int i = 0; i < orders.Count; i++)
         {
             var indivPercent = (orders[i].drinkCost)/totalCost;
             cummulative += indivPercent;
-            if (rand < cummulative)
+            if (rand < cummulative && luckyWinner == "")
             {
                 luckyWinner = orders[i].name;
-                break;
+                Console.WriteLine(data.Length);
+                var histRecord = data.FirstOrDefault(x => x.Name == luckyWinner);
+                if(histRecord != null)
+                {
+                    histRecord.AmountPaid += totalCost;
+                    histRecord.CoffeeCosts += orders[i].drinkCost;
+                } else {
+                    var firstPurchase = new Purchases() { Name = luckyWinner, AmountPaid = totalCost, CoffeeCosts = orders[i].drinkCost };
+                    data.Append(firstPurchase);
+                    
+                    Console.WriteLine(firstPurchase.Name);
+                }
+                
+            } else
+            {   var histRecord = data.FirstOrDefault(x => x.Name == orders[i].name);
+                if(histRecord != null)
+                {
+                    histRecord.CoffeeCosts += orders[i].drinkCost;
+                } else {
+                    var firstPurchase = new Purchases() { Name = orders[i].name, AmountPaid = 0, CoffeeCosts = orders[i].drinkCost };
+                    data.Append(firstPurchase);
+                    Console.WriteLine(firstPurchase.Name);
+                }
             }
         }
+        Console.WriteLine(data.Count());
+        Console.WriteLine("Gonna set item as string async");
+        await _localstorage.SetItemAsStringAsync("purchases", JsonSerializer.Serialize(data));
+        Console.WriteLine("Wowwee we just set item as string async");
     }
 
     private double CalculateTotal()

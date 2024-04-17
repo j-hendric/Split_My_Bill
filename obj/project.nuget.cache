@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r/b6+FnkWZXjen9gnGDP8FSOTewykyB8NIODfr1j2+Nu0PMY15mSUQzK3AaCsW6v/L3L3WGsD8lKCd5iIkDK1Q==",
+  "dgSpecHash": "u5oQMUt+/iU9ftIs26ByzbqZf5xeUXnk0FM4ePAzkAJGYPi9+JMeSkVdt0oGoR7NNNyx4Yvy2+0iDduwgwZO7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\SplitMyBill.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\13193\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\13193\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.4\\microsoft.aspnetcore.authorization.8.0.4.nupkg.sha512",
     "C:\\Users\\13193\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.4\\microsoft.aspnetcore.components.8.0.4.nupkg.sha512",
     "C:\\Users\\13193\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.4\\microsoft.aspnetcore.components.analyzers.8.0.4.nupkg.sha512",

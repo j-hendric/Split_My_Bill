@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Bob",
+        "AmountPaid": 14.0,
+        "CoffeeCosts": 14.0
+      },
+      {
+        "name": "Jeremy",
+        "AmountPaid": 1.0,
+        "CoffeeCosts": 1.0
+      }
+]

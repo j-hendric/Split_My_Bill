@@ -1,0 +1,64 @@
+﻿@page "/historic"
+@using System.Text.Json
+@inject ILocalStorageService _localstorage;
+
+<PageTitle>Historic Data</PageTitle>
+
+<h1>Historic Data</h1>
+
+<p>This page shows how much everyone has paid in the past.</p>
+
+@if (data == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount Paid</th>
+                <th>Total Coffee Costs</th>
+                <th>Percent Paid</th>
+                <th>Percent Coffee Costs</th>
+            </tr>
+        </thead>
+        @if (totalPaid != null && totalPaid != 0)
+        {
+            <tbody>
+                @foreach (var forecast in data)
+                {
+                    <tr>
+                        <td>@forecast.Name</td>
+                        <td>@forecast.AmountPaid</td>
+                        <td>@forecast.CoffeeCosts</td>
+                        <td>@forecast.AmountPaid/@totalPaid</td>
+                        <td>@forecast.CoffeeCosts/@totalPaid</td>
+                    </tr>
+                }
+            </tbody>
+        }
+    </table>
+}
+
+@code {
+    private Purchases[]? data;
+    private double totalPaid = 0;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var stringData = await _localstorage.GetItemAsStringAsync("purchases");
+        data = stringData != null ? JsonSerializer.Deserialize<Purchases[]>(stringData) : [];
+        totalPaid = data.Select(x => x.AmountPaid).Sum();
+    }
+
+    public class Purchases
+    {
+
+        public double AmountPaid { get; set; }
+        public double CoffeeCosts { get; set; }
+
+        public string? Name { get; set; }
+    }
+}

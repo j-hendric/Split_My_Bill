@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FeJ5dnwsYtqG3QAaUv0CSgYcD/QE/k6iBDpKl1OT0cw=",
+  "Hash": "p2yjkgwidCd4zmI84MuERhq4+aFhsVm0yYV2VmW0SEk=",
   "Source": "SplitMyBill",
   "BasePath": "/",
   "Mode": "Root",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\13193\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.4\\build\\net8.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "SourceId": "SplitMyBill",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\obj\\Debug\\net8.0\\webcil\\Blazored.LocalStorage.wasm"
     },
     {
       "Identity": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
@@ -4900,6 +4919,25 @@
       "OriginalItemSpec": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Win32.Registry.wasm"
     },
     {
+      "Identity": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\obj\\Debug\\net8.0\\compressed\\cxek77buxv.gz",
+      "SourceId": "SplitMyBill",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Blazored.LocalStorage.wasm"
+    },
+    {
       "Identity": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\obj\\Debug\\net8.0\\compressed\\czmy764c0j.gz",
       "SourceId": "SplitMyBill",
       "SourceType": "Computed",
@@ -7919,6 +7957,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\wwwroot\\sample-data\\data.json",
+      "SourceId": "SplitMyBill",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\13193\\Documents\\Work\\SplitMyBill\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "sample-data/data.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\sample-data\\data.json"
     }
   ]
 }
