@@ -43,13 +43,13 @@ else
 }
 
 @code {
-    private Purchases[]? data;
+    private List<Purchases>? data;
     private double totalPaid = 0;
 
     protected override async Task OnInitializedAsync()
     {
         var stringData = await _localstorage.GetItemAsStringAsync("purchases");
-        data = stringData != null ? JsonSerializer.Deserialize<Purchases[]>(stringData) : [];
+        data = stringData != null ? JsonSerializer.Deserialize<List<Purchases>>(stringData) : new List<Purchases>();
         totalPaid = data.Select(x => x.AmountPaid).Sum();
     }
 
