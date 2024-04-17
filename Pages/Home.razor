@@ -63,7 +63,7 @@
         double totalCost = CalculateTotal();
         luckyWinner = "";
         var stringData = await _localstorage.GetItemAsStringAsync("purchases");
-        var data = stringData != null ? JsonSerializer.Deserialize<List<Purchases>>(stringData) : new List<Purchases>();
+        var data = stringData != null ? JsonSerializer.Deserialize<List<Purchase>>(stringData) : new List<Purchase>();
 
         for (int i = 0; i < orders.Count; i++)
         {
@@ -79,7 +79,7 @@
                     histRecord.AmountPaid += totalCost;
                     histRecord.CoffeeCosts += orders[i].drinkCost;
                 } else {
-                    var firstPurchase = new Purchases() { Name = luckyWinner, AmountPaid = totalCost, CoffeeCosts = orders[i].drinkCost };
+                    var firstPurchase = new Purchase() { Name = luckyWinner, AmountPaid = totalCost, CoffeeCosts = orders[i].drinkCost };
                     data.Add(firstPurchase);
                     Console.WriteLine(firstPurchase.Name);
                 }
@@ -90,7 +90,7 @@
                 {
                     histRecord.CoffeeCosts += orders[i].drinkCost;
                 } else {
-                    var firstPurchase = new Purchases() { Name = orders[i].name, AmountPaid = 0, CoffeeCosts = orders[i].drinkCost };
+                    var firstPurchase = new Purchase() { Name = orders[i].name, AmountPaid = 0, CoffeeCosts = orders[i].drinkCost };
                     data.Add(firstPurchase);
                     Console.WriteLine(firstPurchase.Name);
                 }
