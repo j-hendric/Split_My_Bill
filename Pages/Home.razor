@@ -1,0 +1,93 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<tbody>
+    <tr>
+        <td>Name</td>
+        <td>Order Cost</td>
+        <td></td>
+    </tr>
+    @for(int i=0; i< orders.Count(); i++)
+    {  
+        var order = orders[i];
+        int b = i;
+        <tr>
+            <td>
+                <input @bind="@order.name"/>
+            </td>
+            <td>
+                $<InputNumber TValue="double" @bind-Value="order.drinkCost"/>
+            </td>
+            <td>
+                <input type="button" class="btn btn-danger btn-sm"  value="X" @onclick="() => Delete(b)"/>
+            </td>
+        </tr>
+    }
+</tbody>
+
+<br>
+<button class="btn btn-primary" @onclick="AddPerson">Add Person</button>
+<button class="btn btn-primary" @onclick="CalculatePayer">Calculate Payer</button>
+
+<br>
+<br>
+<h5>And the lucky winner is... @luckyWinner!</h5>
+
+@code {
+    private string luckyWinner = "";
+    public List<WorkerOrder> orders = new List<WorkerOrder>
+    {
+        new WorkerOrder { name = "Bob", drinkCost = 0.0 },
+        new WorkerOrder { name = "Jeremy", drinkCost = 0.0 },
+        new WorkerOrder { name = "Other Worker", drinkCost = 0.0 },
+        new WorkerOrder { name = "Someone Else", drinkCost = 0.0 },
+        new WorkerOrder { name = "That One Lady", drinkCost = 0.0 },
+        new WorkerOrder { name = "No Name", drinkCost = 0.0 }
+    };
+
+    private void AddPerson()
+    {
+        orders.Add(new WorkerOrder { name = "", drinkCost= 0.0});
+    }
+
+    private void CalculatePayer()
+    {
+        Random r = new Random();
+        double rand = r.NextDouble();
+        double cummulative = 0.0;
+        double totalCost = CalculateTotal();
+        for (int i = 0; i < orders.Count; i++)
+        {
+            var indivPercent = (orders[i].drinkCost)/totalCost;
+            cummulative += indivPercent;
+            if (rand < cummulative)
+            {
+                luckyWinner = orders[i].name;
+                break;
+            }
+        }
+    }
+
+    private double CalculateTotal()
+    {
+        double total = 0;
+        foreach(var order in orders)
+        {
+            total += order.drinkCost;
+        }
+        return total;
+    }
+
+    private void Delete(int indx)
+    {
+        orders.RemoveAt(indx);
+    }
+
+    public class WorkerOrder
+    {
+        public string name { get; set; }
+        public double drinkCost { get; set; }
+    }
+
+}
